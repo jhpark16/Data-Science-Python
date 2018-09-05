@@ -69,48 +69,48 @@ def costCrossEntropy(y, y_hat):
 
 
 if __name__ == '__main__':
-# Number of data points for each group
-N = 100
-SepDistance = 2.0
-# Create an XOR type dataset
-x1 = SepDistance + np.random.randn(N)
-y1 = SepDistance + np.random.randn(N)
-X1 = np.c_[x1,y1]
-x1 = -SepDistance + np.random.randn(N)
-y1 = -SepDistance + np.random.randn(N)
-X2 = np.c_[x1,y1]
-x1 = SepDistance + np.random.randn(N)
-y1 = -SepDistance + np.random.randn(N)
-X3 = np.c_[x1,y1]
-x1 = -SepDistance + np.random.randn(N)
-y1 = SepDistance + np.random.randn(N)
-X4 = np.c_[x1,y1]
-
-# Combine all X
-X = np.r_[X1,X2,X3,X4]
-# y labels of the XOR type data set
-y = np.r_[np.zeros(N*2),np.ones(N*2)]
-
-plt.scatter(X[:,0], X[:,1], c=y)
-plt.show()
-
-# Add a unit vector
-unitvector = np.ones(N*4)
-# add a column of x*y
-xy = X[:,0] * X[:,1]
-# Combine all columns
-X = np.c_[X,unitvector,xy]
-# Logistic regression setup
-model = LogisticRegression()
-# Train the model with the train set
-costs = model.fit(X,y,epochs=100)
-# Calculate model accurcy with X
-accuracy = model.accuracy(X,y)
-# print accuracy
-print("Accuracy = %.5f" % (accuracy))
-# Predicted y
-y_hat = model.predict(X)
-
-# Plot the predicted classification
-plt.scatter(X[:,0], X[:,1], c=y_hat)
-plt.show()
+  # Number of data points for each group
+  N = 100
+  SepDistance = 2.0
+  # Create an XOR type dataset
+  x1 = SepDistance + np.random.randn(N)
+  y1 = SepDistance + np.random.randn(N)
+  X1 = np.c_[x1,y1]
+  x1 = -SepDistance + np.random.randn(N)
+  y1 = -SepDistance + np.random.randn(N)
+  X2 = np.c_[x1,y1]
+  x1 = SepDistance + np.random.randn(N)
+  y1 = -SepDistance + np.random.randn(N)
+  X3 = np.c_[x1,y1]
+  x1 = -SepDistance + np.random.randn(N)
+  y1 = SepDistance + np.random.randn(N)
+  X4 = np.c_[x1,y1]
+  
+  # Combine all X
+  X = np.r_[X1,X2,X3,X4]
+  # y labels of the XOR type data set
+  y = np.r_[np.zeros(N*2),np.ones(N*2)]
+  
+  plt.scatter(X[:,0], X[:,1], c=y)
+  plt.show()
+  
+  # Add a unit vector
+  unitvector = np.ones(N*4)
+  # add a column of x*y
+  xy = X[:,0] * X[:,1]
+  # Combine all columns
+  X = np.c_[X,unitvector,xy]
+  # Logistic regression setup
+  model = LogisticRegression()
+  # Train the model with the train set
+  costs = model.fit(X,y,epochs=100)
+  # Calculate model accurcy with X
+  accuracy = model.accuracy(X,y)
+  # print accuracy
+  print("Accuracy = %.5f" % (accuracy))
+  # Predicted y
+  y_hat = model.predict(X)
+  
+  # Plot the predicted classification
+  plt.scatter(X[:,0], X[:,1], c=y_hat)
+  plt.show()

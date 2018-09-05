@@ -2,10 +2,13 @@
 ## Regression
 The linear regression is coded with python using numpy vectors and matrices.
 
-## Classification
+## Logistic Regression
 
 
-## Clustering
+## Classification of Facial Expression
+
+
+## Classification of E-Commerce data data
 
 
 ## Neural Networks
