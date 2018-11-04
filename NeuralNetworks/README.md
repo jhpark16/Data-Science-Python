@@ -1,2 +1,2 @@
-# Logistc Regression Examples
-Classification of data that cannot be linearly separated. Donut and XOR type data are shown here as examples.
+# Neural Networks
+Implementation of Neural Networks, L1 and L2 regulizations and gradient descent methods using Python numpy matrix.

@@ -1,5 +1,5 @@
 '''
-Data reader fro the facial recognition data from Kaggle challenge
+The facial expression recognition data from Kaggle challenge
 https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge
 '''
 import numpy as np
