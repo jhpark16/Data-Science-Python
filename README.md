@@ -1,6 +1,6 @@
 # Data Science Programming with Python
 ## Decision Tree
-Decision tree coded with Python. The interface of the decision tree class is designed to be compatible with sk-learn. The decision tree is tested with iris dataset.
+Decision tree is coded with Python and tested with iris dataset. The interface of the decision tree class is designed to be compatible with sk-learn.
 
 
 ## Regression
